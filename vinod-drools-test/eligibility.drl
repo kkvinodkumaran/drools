@@ -1,0 +1,11 @@
+
+import com.vinod.test.Customer
+ 
+dialect "mvel"
+ 
+rule "Customer eligibility rule"
+    when
+        $customer : Customer(age>=21)               
+    then
+        System.out.println($customer.name+" Eligibile for benefits");
+end
